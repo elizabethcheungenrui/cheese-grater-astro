@@ -1,0 +1,30 @@
+---
+// src/components/CCard.astro
+import './Card.css';
+
+const { slug, section, title, image, tag, date, category } = Astro.props;
+---
+
+<article class="card c-card">
+  <a href={`/article/${slug}`} class="link">
+    <div class="ratio-7-5">
+      <img src={image} alt={title} />
+    </div>
+
+    {
+      tag && (
+        <h2 class={`tag tag-minor tag-${section.toLowerCase()}`}>
+          {tag.toUpperCase()}
+        </h2>
+      )
+    }
+
+    <h3 class={`h3-${category}`}>
+      <span>{title}</span>
+    </h3>
+
+    <span class={`date c-card-date ${category}`}>
+      {date}
+    </span>
+  </a>
+</article>

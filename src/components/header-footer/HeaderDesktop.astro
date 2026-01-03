@@ -1,0 +1,95 @@
+---
+import './Header.css';
+import './MoreMenu.css';
+---
+
+<header class="header">
+  <div class="logo">
+    <h3 class="the">THE</h3>
+    <a href="/" class="logo-link">
+      <h3 class="cheese-grater">
+        <span class="cheese">CHEESE </span>
+        <span class="grater">
+          GR<span class="grater-icon"></span>TER
+        </span>
+      </h3>
+    </a>
+  </div>
+
+  <span class="best">SPA Best Publication in London 2025</span>
+
+  <nav class="menu-bar" aria-label="Primary Navigation">
+    <a href="/" class="menu-item">Home</a>
+    <a href="/news" class="menu-item news">News</a>
+    <a href="/humour" class="menu-item humour">Humour</a>
+    <a href="/voices" class="menu-item voices">Voices</a>
+    <a href="/podcast" class="menu-item podcast">Podcast</a>
+
+    <a
+      href="https://womenswrongs.cheesegratermagazine.org"
+      target="_blank"
+      class="menu-item"
+    >
+      Women's Wrongs
+    </a>
+
+    <button
+      class="menu-item menu-more"
+      aria-controls="more-menu"
+      onclick="document.body.classList.toggle('more-open')"
+    >
+      More
+    </button>
+
+    <a href="/past-issues" class="menu-item print-edition"> Print Edition </a>
+
+    <a
+      href="https://us17.campaign-archive.com/home/?u=65bd5c7a770205040fd2e9e8a&id=9679db51c3"
+      target="_blank"
+      class="menu-item print-edition"
+    >
+      The Digestive
+    </a>
+  </nav>
+</header>
+
+<div id="more-menu" class="more-menu">
+  <div class="menu-inner">
+    <div class="more-submenu">
+      <h3>About Us!</h3>
+      <a href="/about" class="more-menu-text">Who We Are</a>
+      <a href="/get-involved" class="more-menu-text">Get Involved!</a>
+      <a href="/awards" class="more-menu-text">Awards and Accolades</a>
+      <a href="/past-editors" class="more-menu-text">Past Editors</a>
+      <a href="/life-members" class="more-menu-text">Honorary Life Members</a>
+    </div>
+
+    <div class="more-submenu">
+      <h3>Contact</h3>
+      <a href="/contact-us" class="more-menu-text">Contact Us</a>
+      <a href="/anonymous-form" class="more-menu-text">Anonymous Form</a>
+    </div>
+
+    <div class="more-submenu">
+      <h3>Member Resources</h3>
+      <a href="/training-style" class="more-menu-text"
+        >Training and Style Guide</a
+      >
+      <a href="/help-welfare" class="more-menu-text">Help and Welfare</a>
+    </div>
+
+    <div class="more-submenu">
+      <button
+        class="more-close"
+        onclick="document.body.classList.remove('more-open')"
+        aria-label="Close menu"
+      >
+        <h3 class="x">&#x2718;</h3>
+      </button>
+    </div>
+  </div>
+
+  <a href="/archive" class="more-menu-text">
+    <span class="time-machine">The Time Machine</span>
+  </a>
+</div>

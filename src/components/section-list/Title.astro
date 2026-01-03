@@ -1,0 +1,26 @@
+---
+import './Title.css';
+const { sectionUpper } = Astro.props;
+
+const sectionTitles = {
+  voices: [
+    'Voices & Letters',
+    'Opinion, reviews, and analysis: tell the rest of UCL what you think.',
+  ],
+  news: [
+    'News & Investigations',
+    'Your most-trusted news source on all things UCL.',
+  ],
+  humour: ['Humour, Satire & Graphics', 'The ONLY funny people at UCL.'],
+};
+
+type SectionKey = keyof typeof sectionTitles;
+const section = sectionUpper.toLowerCase() as SectionKey;
+
+const [title, subtitle] = sectionTitles[section] ?? ['Section', ''];
+---
+
+<header class={`title ${section}`}>
+  <h1 class="heading">{title}</h1>
+  <p class="subheading">{subtitle}</p>
+</header>
