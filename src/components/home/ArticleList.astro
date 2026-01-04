@@ -1,0 +1,103 @@
+---
+import "./ArticleList.css";
+import BCard from "../../components/cards/BCard";
+import MBCard from "../../components/cards/MBCard";
+import { getSectionArticles } from "../../lib/getSectionArticles";
+import { formatDate, truncateWords } from "../../methods/formatting";
+
+const { section } = Astro.props;
+
+type SectionKey = keyof typeof sectionInfo;
+
+const data = await getSectionArticles(section, 9);
+const articles = data.articles;
+const sectionKey = section.toLowerCase() as SectionKey;
+
+const sectionInfo = {
+  voices: [
+    "Tell the rest of UCL what you think",
+    "See the rest of our voice pieces and letters →",
+  ],
+  news: [
+    "Your most-trusted source of UCL Students' Union and campus news",
+    "See all of our news and investigations stories →",
+  ],
+  humour: [
+    "The ONLY funny people at UCL x",
+    "See us take the piss out of everything else →",
+  ],
+} as const;
+---
+
+<section id={sectionKey} class="article-list">
+  <div class="main-grid">
+
+    <div class="top-grid">
+      <div class="titles">
+        <h3 class={`${sectionKey}-h3`}>
+          {section}
+        </h3>
+
+        <p>{sectionInfo[sectionKey][0]}</p>
+
+        <a href={`/${sectionKey}`} class={`underline-link ${sectionKey}-link`}>
+          {sectionInfo[sectionKey][1]}
+        </a>
+      </div>
+
+      <!-- DESKTOP ONLY -->
+      <div class="desktop-only">
+        <BCard
+          slug={articles[3].slug}
+          section={data.section}
+          title={articles[3].title}
+          summary={truncateWords(articles[3].summary ?? "", 120)}
+          image={articles[3].image_url ?? ""}
+          tag={articles[3].subsection}
+          date={formatDate(articles[3].date_published)}
+        />
+      </div>
+      <div class="desktop-only">
+        <BCard
+          slug={articles[4].slug}
+          section={data.section}
+          title={articles[4].title}
+          summary={truncateWords(articles[4].summary ?? "", 120)}
+          image={articles[4].image_url ?? ""}
+          tag={articles[4].subsection}
+          date={formatDate(articles[4].date_published)}
+        />
+      </div>
+    </div>
+
+    <!-- DESKTOP GRID -->
+    <div class="bottom-grid desktop-only">
+      {articles.slice(5, 9).map(article => (
+        <BCard
+          slug={article.slug}
+          section={data.section}
+          title={article.title}
+          summary=""
+          image={article.image_url ?? ""}
+          tag={article.subsection}
+          date={formatDate(article.date_published)}
+        />
+      ))}
+    </div>
+
+    <!-- MOBILE GRID -->
+    <div class="bottom-grid mobile-only">
+      {articles.slice(3, 7).map(article => (
+        <MBCard
+          slug={article.slug}
+          section={data.section}
+          title={article.title}
+          image={article.image_url ?? ""}
+          tag={article.subsection}
+          date={formatDate(article.date_published)}
+        />
+      ))}
+    </div>
+
+  </div>
+</section>

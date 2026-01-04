@@ -1,0 +1,27 @@
+---
+// src/pages/article/[slug].astro
+export const prerender = false;
+
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ArticleContent from "../../components/article/ArticleContent.astro";
+
+import { supabase } from "../../lib/supabaseClient";
+
+// get slug from URL
+const { slug } = Astro.params;
+
+// fetch article at request/build time
+const { data: article, error } = await supabase
+  .from("articles")
+  .select("*")
+  .eq("slug", slug)
+  .single();
+
+if (error || !article) {
+  throw new Error("Article not found");
+}
+---
+
+<BaseLayout title=`${article.title} - The Cheese Grater Magazine` description={article.summary}>
+  <ArticleContent article={article} isEditor={false} />
+</BaseLayout>

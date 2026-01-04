@@ -16,11 +16,13 @@
 }
 
 /* column content styles */
-.footer .column p {
+.footer .column p,
+.footer .column address {
   margin-top: 0.6rem;
   line-height: 1.6;
   color: var(--cg-font);
   font-size: 0.8rem;
+  font-style: normal;
 }
 
 .footer .ipso {

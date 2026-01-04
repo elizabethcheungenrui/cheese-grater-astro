@@ -1,0 +1,19 @@
+---
+// src/pages/[...slug].Astro
+export const prerender = false;
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/NotFound.css";
+
+Astro.response.status = 404;
+---
+
+<BaseLayout title="404 – Not Found">
+  <main class="not-found">
+    <h1>404 Not Found</h1>
+    <p>
+      Either we’ve cocked up and routed this link to something that doesn’t exist,
+      or you just aren’t that good at typing in links yourself.
+      Maybe try searching up what you want instead?
+    </p>
+  </main>
+</BaseLayout>

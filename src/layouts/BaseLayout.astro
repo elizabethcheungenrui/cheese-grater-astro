@@ -1,18 +1,49 @@
 ---
-const { title = 'The Cheese Grater Magazine' } = Astro.props;
+// src/layouts/BaseLayout.astro
+import HeaderDesktop from "../components/header-footer/HeaderDesktop.astro";
+import HeaderMobile from "../components/header-footer/HeaderMobile.astro";
+import Footer from "../components/header-footer/Footer.astro";
+import "../styles/main.css";
+
+const {
+  title = "The Cheese Grater Magazine",
+  description = "Students' Union UCL's multi-award winning student publication, specialising in investigative and satirical journalism since 2004.",
+} = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title}</title>
 
-    <!-- global CSS -->
-    <link rel="stylesheet" href="/src/styles/main.css" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+
+    <link
+      rel="icon"
+      href="https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/images/author_thumbnails/cg_author.jpeg"
+      sizes="32x32"
+    />
+
+    {/* Allow pages to inject extra head tags */}
+    <slot name="head" />
   </head>
+
   <body>
-    <slot />
+    <HeaderDesktop />
+    <HeaderMobile />
+    <main class="page">
+      <slot />
+    </main>
+    <Footer />
+    <script>
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          document.body.classList.remove('more-open');
+        }
+      });
+    </script>
   </body>
 </html>

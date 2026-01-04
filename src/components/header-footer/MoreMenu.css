@@ -1,13 +1,21 @@
 .more-menu {
   width: 100%;
-  overflow: hidden;
   background: #eaeaea;
-  transition: max-height 500ms ease;
+
   max-height: 0;
+  overflow: hidden;
+
+  transition: max-height 400ms ease;
+  border-bottom: 2px solid #ddd;
 }
 
-.more-menu.open {
-  max-height: 500px;
+/* when open */
+body.more-open .more-menu {
+  max-height: 600px;
+}
+
+body.more-open {
+  overflow: hidden;
 }
 
 .menu-inner {

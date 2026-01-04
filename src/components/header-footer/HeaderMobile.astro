@@ -1,0 +1,67 @@
+---
+// src/components/header/HeaderMobile.astro
+import "./HeaderMobile.css";
+import "./MoreMenuMobile.css";
+---
+
+<header class="header-mobile">
+  <div class="logo">
+    <h3 class="the">THE</h3>
+    <a href="/" class="logo-link">
+      <h3 class="cheese-grater">
+        <span class="cheese">CHEESE </span>
+        <span class="grater">
+          GR<span class="grater-icon"></span>TER
+        </span>
+      </h3>
+    </a>
+  </div>
+
+  <details class="mobile-menu">
+    <summary class="menu-toggle" aria-label="Open menu">
+      ☰
+    </summary>
+
+    <nav class="menu-panel">
+      <a href="/">Home</a>
+      <a href="/news">News</a>
+      <a href="/humour">Humour</a>
+      <a href="/voices">Voices</a>
+      <a href="/podcast">Podcast</a>
+
+      <a href="https://womenswrongs.cheesegratermagazine.org" target="_blank">
+        Women’s Wrongs
+      </a>
+
+      <a href="/past-issues" class="yellow">Print Edition</a>
+      <a
+        href="https://us17.campaign-archive.com/home/?u=65bd5c7a770205040fd2e9e8a&id=9679db51c3"
+        target="_blank"
+        class="yellow"
+      >
+        The Digestive
+      </a>
+
+      <details>
+        <summary>About Us</summary>
+        <a href="/about">Who We Are</a>
+        <a href="/get-involved">Get Involved</a>
+        <a href="/awards">Awards</a>
+        <a href="/past-editors">Past Editors</a>
+        <a href="/life-members">Honorary Life Members</a>
+      </details>
+
+      <details>
+        <summary>Contact</summary>
+        <a href="/contact-us">Contact Us</a>
+        <a href="/anonymous-form">Anonymous Form</a>
+      </details>
+
+      <details>
+        <summary>Member Resources</summary>
+        <a href="/training-style">Training & Style</a>
+        <a href="/help-welfare">Help & Welfare</a>
+      </details>
+    </nav>
+  </details>
+</header>

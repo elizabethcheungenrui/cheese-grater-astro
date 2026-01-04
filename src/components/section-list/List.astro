@@ -1,19 +1,19 @@
 ---
-import CCard from '../cards/CCard.astro';
+import CCard from '../cards/CCard';
 import { getSectionArticles } from '../../lib/getSectionArticles';
 import { formatDate } from '../../methods/formatting';
 
 const { section } = Astro.props;
-const articles = await getSectionArticles(section);
+const data = await getSectionArticles(section);
 ---
 
 <ul class="subpage-list">
   {
-    articles.map((article) => (
+    data.articles.map((article) => (
       <li>
         <CCard
           slug={article.slug}
-          section={article.section}
+          section={data.section}
           title={article.title}
           image={article.image_url ?? article.author_thumbnail}
           tag={article.subsection}

@@ -115,6 +115,34 @@ body {
   background: var(--cg-white);
   line-height: 1.5;
 }
+  
+.header-mobile {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .header-desktop {
+    display: none;
+  }
+
+  .header-mobile {
+    display: grid;
+  }
+}
+
+/* default: mobile */
+.page {
+  width: 100%;
+  max-width: none;
+}
+
+/* desktop breakpoint */
+@media (min-width: 1024px) {
+  .page {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+}
 
 /* ----------------------------------------------
    TYPOGRAPHY
