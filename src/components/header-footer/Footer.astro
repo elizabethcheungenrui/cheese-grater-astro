@@ -1,0 +1,65 @@
+---
+// src/components/Footer.astro
+import "./Footer.css";
+---
+
+<footer class="footer">
+  <section class="contact">
+
+    <!-- LEFT COLUMN -->
+    <section class="column">
+      <h3 class="header">Our Standards</h3>
+      <p class="ipso">
+        <em>The Cheese Grater</em> holds itself to the highest standards set out in the
+        IPSO Editor's Code of Practice.
+        If you spot a mistake, let us know at
+        <a href="mailto:editor@cheesegratermagazine.org">
+          editor@cheesegratermagazine.org
+        </a>.
+        If you wish to make a complaint, you can do so
+        <a
+          href="https://studentsunionucl.org/webform/student-media-complaint"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          here
+        </a>.
+      </p>
+    </section>
+
+    <!-- RIGHT COLUMN -->
+    <section class="column">
+      <h3 class="header">Mailing Address</h3>
+      <address>
+        The Cheese Grater Magazine Society<br />
+        C/O Students' Union UCL<br />
+        2/F Bloomsbury Theatre<br />
+        15 Gordon St<br />
+        London WC1H 0AH<br />
+        We accept fan mail, just no clothing of the used variety.
+      </address>
+    </section>
+
+  </section>
+
+  <section class="copyright">
+    <p class="copyright-text">
+      © 2004–{new Date().getFullYear()} The Cheese Grater Magazine, Students’ Union UCL
+    </p>
+
+    <section class="lizzie">
+      <p class="lizzie-text">
+        Website made in React + Supabase by Elizabeth Cheung
+      </p>
+      <p class="lizzie-text">
+        Please direct any website issues to
+        <a href="mailto:elizabeth.cheung.25@ucl.ac.uk">
+          elizabeth.cheung.25@ucl.ac.uk
+        </a>
+      </p>
+      <a href="/editor" class="link">
+        <p class="lizzie-text">Editor Login</p>
+      </a>
+    </section>
+  </section>
+</footer>

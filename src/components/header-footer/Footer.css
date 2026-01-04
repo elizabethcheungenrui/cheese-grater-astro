@@ -1,0 +1,91 @@
+.footer {
+  font-family: "Libre Baskerville";
+}
+
+/* two equal columns */
+.footer .contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20rem;
+  padding: 2rem 10rem;
+
+  align-items: start;
+  justify-content: space-between;
+
+  background: #eeeeee;
+}
+
+/* column content styles */
+.footer .column p {
+  margin-top: 0.6rem;
+  line-height: 1.6;
+  color: var(--cg-font);
+  font-size: 0.8rem;
+}
+
+.footer .ipso {
+  line-height: 1;
+}
+
+.footer .header {
+  font-family: "Bitter";
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--cg-font);
+  margin-bottom: 0.5rem;
+  text-align: start;
+}
+
+.footer .column a {
+  color: var(--cg-yellow);
+  text-decoration: none;
+}
+.footer .column a:hover {
+  text-decoration: underline;
+}
+
+.footer .link {
+  text-decoration: underline;
+  color: var(--cg-yellow);
+}
+
+/* copyright */
+.copyright {
+  display: grid;
+  gap: 0.5rem;
+  text-align: center;
+  padding: 1.5rem 4rem 2rem 4rem;
+  background: #eaeaea;
+  color: var(--cg-font);
+  border-top: 1px solid #ddd;
+}
+
+.copyright-text {
+  font-size: 0.8rem;
+}
+
+.lizzie {
+  display: grid;
+  gap: 0.1rem;
+}
+
+.lizzie-text {
+  font-size: 0.6rem;
+}
+
+.lizzie-text a {
+  color: var(--cg-yellow);
+  text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+  .footer .contact {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem 2rem;
+  }
+  .copyright {
+    padding: 1.5rem 2.5rem 2rem 2.5rem;
+  }
+}
+
