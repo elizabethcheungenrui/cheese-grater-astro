@@ -21,7 +21,7 @@ export default function CCard({
     <div className="card c-card">
       <a href={`/article/${slug}/#`} className="link"> 
         <div className="ratio-7-5">
-          <img src={image} alt={title} />
+          <img src={image || undefined} alt={title} />
         </div>
 
         <h2 className={`tag tag-minor tag-${section.toLowerCase()}`}> {tag.toUpperCase()} </h2>

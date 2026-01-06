@@ -16,6 +16,7 @@ export default function MinorLayout({ data }: { data: HomepageSection }) {
 
     {data.articles.map(article => (
       <CCard
+        key={article.slug}
         slug={article.slug}
         section={data.section}
         title={article.title}

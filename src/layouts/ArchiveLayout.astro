@@ -1,0 +1,34 @@
+---
+// src/layouts/ArchiveLayout.astro
+import "../styles/main.css";
+
+const {
+  title = "Archive - The Cheese Grater Magazine",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1020, initial-scale=1" />
+
+    <title>{title}</title>
+    <meta name="generator" content={Astro.generator} />
+
+    <link
+      rel="icon"
+      href="https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/images/author_thumbnails/cg_author.jpeg"
+      sizes="32x32"
+    />
+
+    {/* Allow pages to inject extra head tags */}
+    <slot name="head" />
+  </head>
+
+  <body>
+    <main class="page">
+      <slot />
+    </main>
+  </body>
+</html>

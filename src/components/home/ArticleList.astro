@@ -52,7 +52,7 @@ const sectionInfo = {
           section={data.section}
           title={articles[3].title}
           summary={truncateWords(articles[3].summary ?? "", 120)}
-          image={articles[3].image_url ?? ""}
+          image={articles[3].image_url || articles[3].author_thumbnail}
           tag={articles[3].subsection}
           date={formatDate(articles[3].date_published)}
         />
@@ -63,7 +63,7 @@ const sectionInfo = {
           section={data.section}
           title={articles[4].title}
           summary={truncateWords(articles[4].summary ?? "", 120)}
-          image={articles[4].image_url ?? ""}
+          image={articles[4].image_url || articles[4].author_thumbnail}
           tag={articles[4].subsection}
           date={formatDate(articles[4].date_published)}
         />
@@ -74,11 +74,12 @@ const sectionInfo = {
     <div class="bottom-grid desktop-only">
       {articles.slice(5, 9).map(article => (
         <BCard
+          key={article.slug}
           slug={article.slug}
           section={data.section}
           title={article.title}
           summary=""
-          image={article.image_url ?? ""}
+          image={article.image_url || article.author_thumbnail}
           tag={article.subsection}
           date={formatDate(article.date_published)}
         />
@@ -89,10 +90,11 @@ const sectionInfo = {
     <div class="bottom-grid mobile-only">
       {articles.slice(3, 7).map(article => (
         <MBCard
+          key={article.slug}
           slug={article.slug}
           section={data.section}
           title={article.title}
-          image={article.image_url ?? ""}
+          image={article.image_url || article.author_thumbnail}
           tag={article.subsection}
           date={formatDate(article.date_published)}
         />

@@ -22,7 +22,7 @@ export default function ACard({
       <a href={`/article/${slug}`} className="link">
       
         <div className="ratio-7-5">
-          <img src={image} alt={title} />
+          <img src={image || undefined} alt={title} />
         </div>
 
         <span className={`tag tag-major tag-${section.toLowerCase()}`}> {tag.toUpperCase()} </span>
