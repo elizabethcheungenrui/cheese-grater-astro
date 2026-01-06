@@ -1,8 +1,8 @@
 import "./MajorLayoutMobile.css"
 
-import ACard from "./ACard";
-import MBCard from "./MBCard";
-import type { HomepageSection } from "../api/getHomepageSection";
+import ACard from "../components/cards/ACard";
+import MBCard from "../components/cards/MBCard";
+import type { HomepageSection } from "../lib/getSectionArticles";
 import { formatDate, truncateWords } from "../methods/formatting";
 
 export default function MajorLayoutMobile({ data }: { data: HomepageSection }) {

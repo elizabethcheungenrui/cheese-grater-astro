@@ -17,51 +17,61 @@ import "./MoreMenuMobile.css";
     </a>
   </div>
 
-  <details class="mobile-menu">
-    <summary class="menu-toggle" aria-label="Open menu">
-      ☰
-    </summary>
+  <button
+    class="menu-toggle"
+    aria-controls="mobile-menu"
+    onclick="document.body.classList.toggle('menu-open')"
+  >
+  <p>☰</p>
+  </button>
+</header>
 
-    <nav class="menu-panel">
-      <a href="/">Home</a>
-      <a href="/news">News</a>
-      <a href="/humour">Humour</a>
-      <a href="/voices">Voices</a>
-      <a href="/podcast">Podcast</a>
+<nav id="mobile-menu" class="mobile-menu">
+  <div class="mobile-menu-inner">
+    <a href="/">Home</a>
+    <a href="/news">News</a>
+    <a href="/humour">Humour</a>
+    <a href="/voices">Voices</a>
+    <a href="/podcast">Podcast</a>
 
-      <a href="https://womenswrongs.cheesegratermagazine.org" target="_blank">
-        Women’s Wrongs
-      </a>
+    <a href="https://womenswrongs.cheesegratermagazine.org" target="_blank">
+      Women’s Wrongs
+    </a>
 
-      <a href="/past-issues" class="yellow">Print Edition</a>
-      <a
-        href="https://us17.campaign-archive.com/home/?u=65bd5c7a770205040fd2e9e8a&id=9679db51c3"
-        target="_blank"
-        class="yellow"
-      >
-        The Digestive
-      </a>
+    <a href="/past-issues" class="yellow">Print Edition</a>
+    <a
+      href="https://us17.campaign-archive.com/home/?u=65bd5c7a770205040fd2e9e8a&id=9679db51c3"
+      target="_blank"
+      class="yellow"
+    >
+      The Digestive
+    </a>
 
-      <details>
-        <summary>About Us</summary>
+    <details>
+      <summary>About Us</summary>
+      <div class="details">
         <a href="/about">Who We Are</a>
         <a href="/get-involved">Get Involved</a>
         <a href="/awards">Awards</a>
         <a href="/past-editors">Past Editors</a>
         <a href="/life-members">Honorary Life Members</a>
-      </details>
+      </div>
+    </details>
 
-      <details>
-        <summary>Contact</summary>
+    <details>
+      <summary>Contact</summary>
+      <div class="details">
         <a href="/contact">Contact Us</a>
         <a href="/tips">Anonymous Form</a>
-      </details>
+      </div>
+    </details>
 
-      <details>
-        <summary>Member Resources</summary>
+    <details>
+      <summary>Member Resources</summary>
+      <div class="details">
         <a href="/resources">Training & Style</a>
         <a href="/welfare">Help & Welfare</a>
-      </details>
-    </nav>
-  </details>
-</header>
+      </div>
+    </details>
+  </div>
+</nav>
