@@ -1,16 +1,16 @@
 ---
-import "./ArticleContent.css";
-import { formatDate } from "../../methods/formatting";
-import CCard from "../cards/CCard";
-import MBCard from "../cards/MBCard";
-import { getSectionArticles } from "../../lib/getSectionArticles";
+import './ArticleContent.css';
+import { formatDate } from '../../methods/formatting';
+import CCard from '../cards/CCard';
+import MBCard from '../cards/MBCard';
+import { getSectionArticles } from '../../lib/getSectionArticles';
 
 const { article, isEditor } = Astro.props;
 
 // fetch related articles at build/request time
 const data = await getSectionArticles(article.section);
 
-const filtered = data.articles.filter(a => a.slug !== article.slug);
+const filtered = data.articles.filter((a) => a.slug !== article.slug);
 const dataTop = filtered.slice(0, 4);
 const dataBottom = filtered.slice(4, 8);
 ---
@@ -23,7 +23,7 @@ const dataBottom = filtered.slice(4, 8);
           <a href={`/${article.section.toLowerCase()}`} class="section-link">
             {article.section}
           </a>
-          {" / "}
+          {' / '}
           {formatDate(article.date_published)}
         </p>
 
@@ -37,7 +37,7 @@ const dataBottom = filtered.slice(4, 8);
           <img
             class="author-image"
             src={article.author_thumbnail ??
-              "https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/images/author_thumbnails/cg_author.jpeg"}
+              'https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/images/author_thumbnails/cg_author.jpeg'}
             alt={article.author}
           />
 
@@ -47,96 +47,111 @@ const dataBottom = filtered.slice(4, 8);
           </div>
         </address>
 
-        {article.image_url && (
-          <img src={article.image_url} alt={article.image_caption || ""} />
-        )}
+        {
+          article.image_url && (
+            <img src={article.image_url} alt={article.image_caption || ''} />
+          )
+        }
 
-        {article.image_caption && (
-          <p class="caption">{article.image_caption}</p>
-        )}
+        {
+          article.image_caption && (
+            <p class="caption">{article.image_caption}</p>
+          )
+        }
 
-        {article.content && (
-          <div class="article-body" set:html={article.content} />
-        )}
+        {
+          article.content && (
+            <div class="article-body" set:html={article.content} />
+          )
+        }
       </section>
     </main>
 
-    {!isEditor && (
-      <aside class="more-article">
-        <span class="readmore">
-          {article.section === "Podcast" ? "Listen to more" : "Read more"}
-        </span>
+    {
+      !isEditor && (
+        <aside class="more-article">
+          <span class="readmore">
+            {article.section === 'Podcast' ? 'Listen to more' : 'Read more'}
+          </span>
 
-        <div class="article-row desktop-only">
-          {dataTop.map(a => (
-            <CCard
-              slug={a.slug}
-              section={data.section}
-              title={a.title}
-              image={a.image_url ?? a.author_thumbnail}
-              tag={a.subsection}
-              date={formatDate(a.date_published)}
-              category="subpage"
-            />
-          ))}
-        </div>
+          <div class="article-row desktop-only">
+            {dataTop.map((a) => (
+              <CCard
+                slug={a.slug}
+                section={data.section}
+                title={a.title}
+                image={a.image_url ?? a.author_thumbnail}
+                tag={a.subsection}
+                date={formatDate(a.date_published)}
+                category="subpage"
+              />
+            ))}
+          </div>
 
-        <div class="article-row desktop-only">
-          {dataBottom.map(a => (
-            <CCard
-              slug={a.slug}
-              section={data.section}
-              title={a.title}
-              image={a.image_url ?? a.author_thumbnail}
-              tag={a.subsection}
-              date={formatDate(a.date_published)}
-              category="subpage"
-            />
-          ))}
-        </div>
+          <div class="article-row desktop-only">
+            {dataBottom.map((a) => (
+              <CCard
+                slug={a.slug}
+                section={data.section}
+                title={a.title}
+                image={a.image_url ?? a.author_thumbnail}
+                tag={a.subsection}
+                date={formatDate(a.date_published)}
+                category="subpage"
+              />
+            ))}
+          </div>
 
-        <div class="article-row mobile-only">
-          {dataTop.map(a => (
-            <MBCard
-              slug={a.slug}
-              section={data.section}
-              title={a.title}
-              image={a.image_url ?? a.author_thumbnail}
-              tag={a.subsection}
-              date={formatDate(a.date_published)}
-            />
-          ))}
-        </div>
-      </aside>
-    )}
+          <div class="article-row mobile-only">
+            {dataTop.map((a) => (
+              <MBCard
+                slug={a.slug}
+                section={data.section}
+                title={a.title}
+                image={a.image_url ?? a.author_thumbnail}
+                tag={a.subsection}
+                date={formatDate(a.date_published)}
+              />
+            ))}
+          </div>
+        </aside>
+      )
+    }
   </div>
 
-  {!isEditor && (
-    <aside class="container-side">
-      <div class="contact-newsletter">
-        <span class="side-header">Got a story for us?</span>
-        <p>
-          If you have something you want to share with our journalists, send us a tip via our
-          <a href="https://instagram.com/uclcheesegrater" target="_blank"> socials</a>,
-          <a href="/get-involved"> email</a>,
-          or our
-          <a href="/anonymous-form"> anonymous webform</a>.
-        </p>
+  {
+    !isEditor && (
+      <aside class="container-side">
+        <div class="contact-newsletter">
+          <span class="side-header">Got a story for us?</span>
+          <p>
+            If you have something you want to share with our journalists, send
+            us a tip via our
+            <a href="https://instagram.com/uclcheesegrater" target="_blank">
+              {' '}
+              socials
+            </a>
+            ,<a href="/get-involved"> email</a>, or our
+            <a href="/anonymous-form"> anonymous webform</a>.
+          </p>
 
-        <span class="side-header">Join our fortnightly newsletter</span>
-        <p>
-          The Digestive is our fortnightly newsletter, covering the latest campus news, satire, and student discourse every other Monday during term time.
-        </p>
+          <span class="side-header">Join our fortnightly newsletter</span>
+          <p>
+            The Digestive is our fortnightly newsletter, covering the latest
+            campus news, satire, and student discourse every other Monday during
+            term time.
+          </p>
 
-        <a
-          href="https://us17.campaign-archive.com/home/?u=65bd5c7a770205040fd2e9e8a&id=9679db51c3"
-          target="_blank"
-        >
-          <button>
-            <h3 class="button-h3">Subscribe</h3>
-          </button>
-        </a>
-      </div>
-    </aside>
-  )}
+          <a
+            href="https://us17.campaign-archive.com/home/?u=65bd5c7a770205040fd2e9e8a&id=9679db51c3"
+            target="_blank"
+          >
+            <button>
+              <h3 class="button-h3">Subscribe</h3>
+            </button>
+          </a>
+        </div>
+      </aside>
+    )
+  }
 </article>

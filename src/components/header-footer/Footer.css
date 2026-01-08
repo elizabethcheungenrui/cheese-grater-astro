@@ -1,5 +1,5 @@
 .footer {
-  font-family: "Libre Baskerville";
+  font-family: 'Libre Baskerville';
 }
 
 /* two equal columns */
@@ -30,7 +30,7 @@
 }
 
 .footer .header {
-  font-family: "Bitter";
+  font-family: 'Bitter';
   font-weight: 700;
   font-size: 1.2rem;
   color: var(--cg-font);
@@ -90,4 +90,3 @@
     padding: 1.5rem 2.5rem 2rem 2.5rem;
   }
 }
-

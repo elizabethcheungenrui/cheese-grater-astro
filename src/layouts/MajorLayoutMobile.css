@@ -16,7 +16,7 @@
 .major-layout-main-grid-mobile .major-section-title {
   justify-self: center;
   display: inline-block;
-  font-family: "Bitter";
+  font-family: 'Bitter';
   font-weight: 800;
   font-size: 2rem;
   border-bottom: 4px solid #000;
@@ -36,16 +36,15 @@
   font-size: 1.8rem;
   font-weight: 800;
   border-bottom: 4px solid #000;
-  
-  transition: 
+
+  transition:
     background-size 400ms,
     color 400ms;
 
-  background:
-    var(
-      --section-gradient,
-      linear-gradient(to right, red, magenta, blue)
-    );
+  background: var(
+    --section-gradient,
+    linear-gradient(to right, red, magenta, blue)
+  );
   background-size: 0 120%;
   background-position: 0 80%;
   background-repeat: no-repeat;
@@ -61,11 +60,19 @@
 }
 
 .major-layout-main-grid-mobile .button.title-Humour {
-  --section-gradient: linear-gradient(to right, var(--cg-humour), var(--cg-humour));
+  --section-gradient: linear-gradient(
+    to right,
+    var(--cg-humour),
+    var(--cg-humour)
+  );
 }
 
 .major-layout-main-grid-mobile .button.title-Voices {
-  --section-gradient: linear-gradient(to right, var(--cg-voices), var(--cg-voices));
+  --section-gradient: linear-gradient(
+    to right,
+    var(--cg-voices),
+    var(--cg-voices)
+  );
 }
 
 .major-layout-main-grid-mobile .button-row a {
@@ -84,4 +91,3 @@
 .major-layout-main-grid-mobile .title-News {
   border-color: var(--cg-news);
 }
-

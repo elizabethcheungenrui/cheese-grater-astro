@@ -1,18 +1,16 @@
 ---
 // src/layouts/MoreLayout.astro
-import HeaderDesktop from "../components/header-footer/HeaderDesktop.astro";
-import HeaderMobile from "../components/header-footer/HeaderMobile.astro";
-import MoreTitle from "../components/more/MoreTitle.astro";
-import Footer from "../components/header-footer/Footer.astro";
-import "../styles/main.css";
-import "../styles/MoreStyling.css";
+import HeaderDesktop from '../components/header-footer/HeaderDesktop.astro';
+import HeaderMobile from '../components/header-footer/HeaderMobile.astro';
+import MoreTitle from '../components/more/MoreTitle.astro';
+import Footer from '../components/header-footer/Footer.astro';
+import '../styles/main.css';
+import '../styles/MoreStyling.css';
+
+const { frontmatter } = Astro.props;
 
 const {
-  frontmatter,
-} = Astro.props;
-
-const { 
-  title, 
+  title,
   description = "Students' Union UCL's multi-award winning student publication, specialising in investigative and satirical journalism since 2004.",
 } = frontmatter;
 ---
@@ -36,7 +34,7 @@ const {
     {/* Allow pages to inject extra head tags */}
     <slot name="head" />
   </head>
-  
+
   <body>
     <HeaderDesktop />
     <HeaderMobile />

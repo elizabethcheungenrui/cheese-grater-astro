@@ -9,7 +9,7 @@
 }
 
 .not-found p {
-  font-family: "Libre Baskerville";
+  font-family: 'Libre Baskerville';
   font-size: 1.3rem;
   text-align: center;
   color: var(--cg-font);

@@ -1,4 +1,4 @@
-import "./Card.css"
+import './Card.css';
 
 export default function BCard({
   slug,
@@ -24,12 +24,17 @@ export default function BCard({
           <img src={image || undefined} alt={title} />
         </div>
 
-        { (tag != "") && <h2 className={`tag tag-major-mbcard tag-${section.toLowerCase()}`}> {tag.toUpperCase()} </h2> }
+        {tag != '' && (
+          <h2 className={`tag tag-major-mbcard tag-${section.toLowerCase()}`}>
+            {' '}
+            {tag.toUpperCase()}{' '}
+          </h2>
+        )}
 
-        <h3> 
+        <h3>
           <span className="wipe">{title}</span>
         </h3>
-      
+
         <p> {summary} </p>
 
         <span className="date"> {date} </span>

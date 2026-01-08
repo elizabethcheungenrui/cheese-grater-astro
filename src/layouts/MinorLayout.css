@@ -9,81 +9,69 @@
 }
 
 .minor-layout-Voices {
-  background-image: 
+  background-image:
     linear-gradient(
       in oklab,
-      rgba(196, 40, 115, 0.70) 0%,
+      rgba(196, 40, 115, 0.7) 0%,
       rgba(196, 40, 115, 0.65) 35%,
-      rgba(180, 55, 120, 0.60) 60%,
+      rgba(180, 55, 120, 0.6) 60%,
       rgba(150, 60, 110, 0.55) 100%
     ),
-    url("https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/images/logos/cg.png");
+    url('https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/images/logos/cg.png');
 
-  background-repeat:
-    no-repeat,
-    repeat;
+  background-repeat: no-repeat, repeat;
 
   background-size:
     cover,
     90px auto;
 
-  background-position:
-    center,
-    center;
+  background-position: center, center;
 }
 
 .minor-layout-News {
-  background-image: 
+  background-image:
     linear-gradient(
       in oklab,
-      rgba(44, 89, 174, 0.70) 0%,
+      rgba(44, 89, 174, 0.7) 0%,
       rgba(44, 89, 174, 0.65) 35%,
-      rgba(38, 72, 145, 0.60) 60%,
+      rgba(38, 72, 145, 0.6) 60%,
       rgba(28, 52, 104, 0.55) 100%
     ),
-    url("https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/images/logos/cg.png");
+    url('https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/images/logos/cg.png');
 
-  background-repeat:
-    no-repeat,
-    repeat;
+  background-repeat: no-repeat, repeat;
 
   background-size:
     cover,
     90px auto;
 
-  background-position:
-    center,
-    center;
+  background-position: center, center;
 }
 
 .minor-layout-Humour {
-  background-image: 
+  background-image:
     linear-gradient(
       in oklab,
-      rgba(0, 103, 75, 0.70) 0%,
+      rgba(0, 103, 75, 0.7) 0%,
       rgba(0, 103, 75, 0.65) 35%,
-      rgba(0, 90, 65, 0.60) 60%,
+      rgba(0, 90, 65, 0.6) 60%,
       rgba(0, 70, 50, 0.55) 100%
     ),
-    url("https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/images/logos/cg.png");
+    url('https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/images/logos/cg.png');
 
-  background-repeat:
-    no-repeat,
-    repeat;
+  background-repeat: no-repeat, repeat;
 
   background-size:
     cover,
     90px auto;
 
-  background-position:
-    center,
-    center;
+  background-position: center, center;
 }
 
 .minor-section-title {
   justify-self: center;
   display: inline-block;
-  font-family: "Bitter";
+  font-family: 'Bitter';
   font-weight: 800;
   font-size: 1.3rem;
   border-bottom: 4px solid var(--cg-white);

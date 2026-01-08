@@ -5,36 +5,32 @@
   display: flex;
   flex-direction: row;
   align-items: center;
- 
-  background-image: 
-    linear-gradient(
-      to right,
-      var(--cg-yellow-t) 0%,
-      var(--cg-podcast-t) 100%
-    ),
-    url("https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/images/logos/cg.png");
 
-  background-repeat:
-    no-repeat,
-    repeat;
+  background-image:
+    linear-gradient(to right, var(--cg-yellow-t) 0%, var(--cg-podcast-t) 100%),
+    url('https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/images/logos/cg.png');
+
+  background-repeat: no-repeat, repeat;
 
   background-size:
     cover,
     90px 90px;
 
-  background-position:
-    center,
-    center;
+  background-position: center, center;
 
   animation: cg-drift-newsletter 5s linear infinite;
 }
 
 @keyframes cg-drift-newsletter {
   from {
-    background-position: center, 0 0;
+    background-position:
+      center,
+      0 0;
   }
   to {
-    background-position: center, -180px -90px;
+    background-position:
+      center,
+      -180px -90px;
   }
 }
 
@@ -65,11 +61,11 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: start;
-  gap: 1rem;;
+  gap: 1rem;
 }
 
 .podcast-hero .header {
-  font-family: "Bitter";
+  font-family: 'Bitter';
   font-weight: 800;
   font-size: 2.5rem;
   color: var(--cg-white);
@@ -85,7 +81,7 @@
 }
 
 .podcast-hero p {
-  font-family: "Libre Baskerville";
+  font-family: 'Libre Baskerville';
   font-size: 0.9rem;
   color: var(--cg-white);
 }

@@ -11,25 +11,26 @@
 }
 
 .more-styling p {
-  font-family: "Libre Baskerville";
+  font-family: 'Libre Baskerville';
   color: var(--cg-font);
   font-size: 0.9rem;
   line-height: 2rem;
 }
 
-.more-styling h2, h3 {
+.more-styling h2,
+h3 {
   color: var(--cg-font);
 }
 
 .more-styling a {
-  font-family: "Libre Baskerville";
+  font-family: 'Libre Baskerville';
   font-size: 0.9rem;
   color: var(--cg-yellow);
   text-decoration: none;
 }
 
 .more-styling li {
-  font-family: "Libre Baskerville";
+  font-family: 'Libre Baskerville';
   font-size: 0.9rem;
   line-height: 2rem;
   color: var(--cg-font);
@@ -50,7 +51,7 @@
 }
 
 .whoweare h1 {
-  font-family: "Libre Baskerville";
+  font-family: 'Libre Baskerville';
   color: var(--cg-font);
   text-align: center;
 }
@@ -78,7 +79,7 @@
 
 .author {
   color: var(--cg-font);
-  font-family: "Libre Baskerville";
+  font-family: 'Libre Baskerville';
   font-weight: 700;
   font-size: 1rem;
   line-height: 1.1rem;
@@ -86,7 +87,7 @@
 
 .role {
   color: var(--cg-font);
-  font-family: "Libre Baskerville";
+  font-family: 'Libre Baskerville';
   font-size: 0.8rem;
   line-height: 1.1rem;
 }
@@ -107,7 +108,7 @@
 
 .awards table {
   border-collapse: collapse;
-  font-family: "Libre Baskerville";
+  font-family: 'Libre Baskerville';
   font-size: 0.9rem;
   color: var(--cg-font);
   width: 100%;
@@ -161,17 +162,26 @@
 }
 
 .awards th:nth-child(1),
-.awards td:nth-child(1) { width: 15%; }
+.awards td:nth-child(1) {
+  width: 15%;
+}
 
 .awards th:nth-child(2),
-.awards td:nth-child(2) { width: 5%; }
+.awards td:nth-child(2) {
+  width: 5%;
+}
 
 .awards th:nth-child(3),
-.awards td:nth-child(3) { width: 20%; }
+.awards td:nth-child(3) {
+  width: 20%;
+}
 
 .awards th:nth-child(4),
-.awards td:nth-child(4) { width: 50%; }
+.awards td:nth-child(4) {
+  width: 50%;
+}
 
 .awards th:nth-child(5),
-.awards td:nth-child(5) { width: 10%; }
-
+.awards td:nth-child(5) {
+  width: 10%;
+}

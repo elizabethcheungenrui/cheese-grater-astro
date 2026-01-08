@@ -13,7 +13,7 @@
 }
 
 .archive-page p {
-  font-family: "Georgia";
+  font-family: 'Georgia';
 }
 
 .archive-page .header-nav ul {
@@ -25,7 +25,7 @@
 }
 
 .archive-page .header-nav a {
-  font-family: "Arial";
+  font-family: 'Arial';
   font-size: 14px;
   font-weight: bold;
   text-decoration: none;
@@ -45,13 +45,13 @@
 }
 
 .archive-page .page-body h3 {
-  font-family: "Arial"; 
+  font-family: 'Arial';
   font-size: 15px;
   color: black;
 }
 
 .archive-page .page-body a {
-  text-decoration: none; 
+  text-decoration: none;
   color: #333;
 }
 
@@ -73,7 +73,7 @@
 .archive-page .section {
   padding: 0 1rem 1rem 1rem;
   display: grid;
-  gap: 1rem
+  gap: 1rem;
 }
 
 .archive-page .section img {
@@ -104,5 +104,5 @@
 }
 
 .archive-page .page-footer p {
-  font-family: "Arial";
+  font-family: 'Arial';
 }

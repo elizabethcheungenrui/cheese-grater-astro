@@ -47,15 +47,15 @@ body.more-open {
   text-align: center;
 
   padding-bottom: 2px;
-  
+
   transition: background-size 400ms;
-  
+
   background-image: none;
   position: relative;
 }
 
 .more-menu-text::after {
-  content: "";
+  content: '';
   position: absolute;
   left: 20%;
   right: 20%;

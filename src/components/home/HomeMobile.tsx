@@ -1,11 +1,11 @@
-import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
-import type { HomepageSection } from "../../lib/getSectionArticles";
+import { motion, AnimatePresence } from 'framer-motion';
+import { useState } from 'react';
+import type { HomepageSection } from '../../lib/getSectionArticles';
 
-import "./HomeMobile.css";
+import './HomeMobile.css';
 
-import MajorLayoutMobile from "../../layouts/MajorLayoutMobile";
-import MinorLayoutMobile from "../../layouts/MinorLayoutMobile";
+import MajorLayoutMobile from '../../layouts/MajorLayoutMobile';
+import MinorLayoutMobile from '../../layouts/MinorLayoutMobile';
 
 type Props = {
   voices: HomepageSection;
@@ -13,16 +13,13 @@ type Props = {
   humour: HomepageSection;
 };
 
-export default function HomeMobile({
-  voices,
-  investigations,
-  humour,
-}: Props) {
-  const [active, setActive] = useState<"voices" | "investigations" | "humour">(
-    "investigations");
+export default function HomeMobile({ voices, investigations, humour }: Props) {
+  const [active, setActive] = useState<'voices' | 'investigations' | 'humour'>(
+    'investigations',
+  );
 
   const spring = {
-    type: "spring" as const,
+    type: 'spring' as const,
     stiffness: 120,
     damping: 20,
   };
@@ -32,9 +29,9 @@ export default function HomeMobile({
       {/* VOICES COLUMN */}
       <motion.aside
         layout
-        onMouseEnter={() => setActive("voices")}
+        onMouseEnter={() => setActive('voices')}
         initial={{ flexGrow: 1 }}
-        animate={{ flexGrow: active === "voices" ? 9 : 1 }}
+        animate={{ flexGrow: active === 'voices' ? 9 : 1 }}
         transition={spring}
       >
         <div className="ghost" />
@@ -42,13 +39,13 @@ export default function HomeMobile({
         <AnimatePresence mode="wait">
           <motion.div
             layout
-            key={active === "voices" ? "voices-major" : "voices-minor"}
+            key={active === 'voices' ? 'voices-major' : 'voices-minor'}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
           >
-            {active === "voices" ? (
+            {active === 'voices' ? (
               <MajorLayoutMobile data={voices} />
             ) : (
               <MinorLayoutMobile data={voices} />
@@ -60,9 +57,9 @@ export default function HomeMobile({
       {/* INVESTIGATIONS COLUMN */}
       <motion.main
         layout
-        onMouseEnter={() => setActive("investigations")}
+        onMouseEnter={() => setActive('investigations')}
         initial={{ flexGrow: 9 }}
-        animate={{ flexGrow: active === "investigations" ? 9 : 1 }}
+        animate={{ flexGrow: active === 'investigations' ? 9 : 1 }}
         transition={spring}
       >
         <div className="ghost" />
@@ -71,16 +68,16 @@ export default function HomeMobile({
           <motion.div
             layout
             key={
-              active === "investigations"
-                ? "investigations-major"
-                : "investigations-minor"
+              active === 'investigations'
+                ? 'investigations-major'
+                : 'investigations-minor'
             }
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
           >
-            {active === "investigations" ? (
+            {active === 'investigations' ? (
               <MajorLayoutMobile data={investigations} />
             ) : (
               <MinorLayoutMobile data={investigations} />
@@ -92,9 +89,9 @@ export default function HomeMobile({
       {/* HUMOUR COLUMN */}
       <motion.aside
         layout
-        onMouseEnter={() => setActive("humour")}
+        onMouseEnter={() => setActive('humour')}
         initial={{ flexGrow: 1 }}
-        animate={{ flexGrow: active === "humour" ? 9 : 1 }}
+        animate={{ flexGrow: active === 'humour' ? 9 : 1 }}
         transition={spring}
       >
         <div className="ghost" />
@@ -102,13 +99,13 @@ export default function HomeMobile({
         <AnimatePresence mode="wait">
           <motion.div
             layout
-            key={active === "humour" ? "humour-major" : "humour-minor"}
+            key={active === 'humour' ? 'humour-major' : 'humour-minor'}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
           >
-            {active === "humour" ? (
+            {active === 'humour' ? (
               <MajorLayoutMobile data={humour} />
             ) : (
               <MinorLayoutMobile data={humour} />

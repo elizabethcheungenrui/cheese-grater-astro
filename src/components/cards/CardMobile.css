@@ -9,7 +9,7 @@
 }
 
 .card h3 {
-  font-family: "Bitter";
+  font-family: 'Bitter';
   font-weight: 600;
   line-height: 1.25;
   color: var(--cg-font);
@@ -17,14 +17,14 @@
 }
 
 .card p {
-  font-family: "Bitter";
+  font-family: 'Bitter';
   font-weight: 400;
   line-height: 1.25;
   color: var(--cg-font);
 }
 
 .date {
-  font-family: "Libre Baskerville";
+  font-family: 'Libre Baskerville';
   font-weight: 400;
   font-size: 0.7rem;
   line-height: 1.25;
@@ -33,20 +33,21 @@
 
 .link {
   text-decoration: none;
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
   gap: 0.4rem;
 }
 
 .wipe {
   display: inline;
   color: var(--cg-font);
-  
+
   transition: background 200ms ease-in-out;
 
   background-image: linear-gradient(
     var(--cg-white) 50%,
-    var(--cg-yellow-t) 50%);
+    var(--cg-yellow-t) 50%
+  );
   background-size: auto 200%;
 }
 
@@ -64,7 +65,7 @@
   align-items: center;
   justify-content: center;
 
-  font-family: "Bitter";
+  font-family: 'Bitter';
   font-weight: 800;
 
   color: white;

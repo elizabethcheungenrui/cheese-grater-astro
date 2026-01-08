@@ -24,7 +24,7 @@
 
 .carousel-viewport::before,
 .carousel-viewport::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   width: 2rem;
@@ -61,14 +61,14 @@
 
   text-decoration: none;
   color: var(--cg-font);
-  transition: 
+  transition:
     background-size 400ms,
     color 400ms;
 
-  background:
-    var(
-      --section-gradient,
-      linear-gradient(to right, var(--cg-yellow-t), var(--cg-yellow-t)));
+  background: var(
+    --section-gradient,
+    linear-gradient(to right, var(--cg-yellow-t), var(--cg-yellow-t))
+  );
   background-size: 0 120%;
   background-position: 0 80%;
   background-repeat: no-repeat;
@@ -84,11 +84,15 @@
 }
 
 .carousel .graphics-link {
-  --section-gradient: linear-gradient(to right, var(--cg-yellow-t), var(--cg-humour-t));
+  --section-gradient: linear-gradient(
+    to right,
+    var(--cg-yellow-t),
+    var(--cg-humour-t)
+  );
 }
 
 .carousel-card {
-  flex: 0 0 calc(100%/4);
+  flex: 0 0 calc(100% / 4);
   padding: 0 1rem;
 }
 

@@ -10,28 +10,19 @@
   text-align: center;
   gap: 1rem;
 
-  background-repeat:
-    no-repeat,
-    repeat;
+  background-repeat: no-repeat, repeat;
 
   background-size:
     cover,
     90px 90px;
 
-  background-position:
-    center,
-    center;
-  
-    background-image: 
-    linear-gradient(
-      to right,
-      var(--cg-yellow-t) 0%,
-      #E2BA0066 100%
-    ),
-    url("https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/images/logos/cg.png");
-  
-  animation: cg-drift-more-title 10s linear infinite;
+  background-position: center, center;
 
+  background-image:
+    linear-gradient(to right, var(--cg-yellow-t) 0%, #e2ba0066 100%),
+    url('https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/images/logos/cg.png');
+
+  animation: cg-drift-more-title 10s linear infinite;
 }
 
 @keyframes cg-drift-more-title {
@@ -46,7 +37,7 @@
       -180px -90px;
   }
   100% {
-    background-position: 
+    background-position:
       center,
       -360px 0;
   }

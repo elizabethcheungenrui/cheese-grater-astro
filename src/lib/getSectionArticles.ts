@@ -16,20 +16,23 @@ export interface HomepageSection {
   articles: HomepageArticle[];
 }
 
-export async function getSectionArticles(section: string, limit?: number): Promise<HomepageSection> {
+export async function getSectionArticles(
+  section: string,
+  limit?: number,
+): Promise<HomepageSection> {
   let query = supabase
     .from('articles')
     .select('*')
     .eq('section', section)
     .order('date_published', { ascending: false });
-  
-  if (typeof limit === "number") {
+
+  if (typeof limit === 'number') {
     query = query.limit(limit);
-  }  
-  
+  }
+
   const { data, error } = await query;
   if (error) throw error;
-  
+
   return {
     section,
     articles: data as HomepageArticle[],

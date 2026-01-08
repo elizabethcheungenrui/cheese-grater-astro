@@ -5,7 +5,7 @@
   align-items: center;
   align-content: start;
   justify-content: space-between;
-  
+
   background: var(--cg-white);
   border-bottom: 2px solid #ddd;
 
@@ -22,7 +22,7 @@
 }
 
 .header-mobile .logo .the {
-  font-family: "Grifa";
+  font-family: 'Grifa';
   font-weight: 400;
   font-size: 0.5rem;
 }
@@ -35,7 +35,7 @@
 
 /* "CHEESE GRATER" */
 .header-mobile .cheese-grater {
-  font-family: "Bitter";
+  font-family: 'Bitter';
   font-weight: 900;
   font-size: 1.5rem;
 
@@ -61,7 +61,7 @@
   width: 1em;
   height: 1em;
 
-  background-image: url("https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/images/logos/cg_full_opacity.png");
+  background-image: url('https://lrhddyosfvnhpxojsjpa.supabase.co/storage/v1/object/public/images/logos/cg_full_opacity.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -80,4 +80,3 @@
   border: none;
   font-size: 1.5rem;
 }
-

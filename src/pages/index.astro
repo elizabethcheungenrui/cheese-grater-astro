@@ -1,21 +1,21 @@
 ---
 // src/pages/index.astro
-import Home from "../components/home/Home";
-import HomeMobile from "../components/home/HomeMobile";
-import GraphicsCarousel from "../components/home/GraphicsCarousel";
-import { getSectionArticles } from "../lib/getSectionArticles";
+import Home from '../components/home/Home';
+import HomeMobile from '../components/home/HomeMobile';
+import GraphicsCarousel from '../components/home/GraphicsCarousel';
+import { getSectionArticles } from '../lib/getSectionArticles';
 
-const voices = await getSectionArticles("Voices", 3);
-const investigations = await getSectionArticles("News", 3);
-const humour = await getSectionArticles("Humour", 3);
+const voices = await getSectionArticles('Voices', 3);
+const investigations = await getSectionArticles('News', 3);
+const humour = await getSectionArticles('Humour', 3);
 
-import BaseLayout from "../layouts/BaseLayout.astro";
-import BestPub from "../components/home/BestPub.astro";
-import Newsletter from "../components/home/Newsletter.astro";
-import Podcast from "../components/home/Podcast.astro";
-import ArticleList from "../components/home/ArticleList.astro";
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BestPub from '../components/home/BestPub.astro';
+import Newsletter from '../components/home/Newsletter.astro';
+import Podcast from '../components/home/Podcast.astro';
+import ArticleList from '../components/home/ArticleList.astro';
 
-import "../styles/home.css";
+import '../styles/home.css';
 ---
 
 <BaseLayout title="The Cheese Grater Magazine">
@@ -36,9 +36,9 @@ import "../styles/home.css";
     />
   </div>
   <BestPub />
-  <ArticleList section="News"/>
+  <ArticleList section="News" />
   <Podcast />
-  <ArticleList section="Humour"/>
+  <ArticleList section="Humour" />
   <Newsletter />
-  <ArticleList section="Voices"/>
+  <ArticleList section="Voices" />
 </BaseLayout>

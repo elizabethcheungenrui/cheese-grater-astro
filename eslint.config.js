@@ -1,18 +1,18 @@
-import js from "@eslint/js";
-import astro from "eslint-plugin-astro";
+import js from '@eslint/js';
+import astro from 'eslint-plugin-astro';
 
 export default [
   js.configs.recommended,
 
   // Astro files
   {
-    files: ["**/*.astro"],
+    files: ['**/*.astro'],
     languageOptions: {
       parser: astro.parser,
       parserOptions: {
-        parser: "@typescript-eslint/parser",
-        extraFileExtensions: [".astro"],
-        sourceType: "module",
+        parser: '@typescript-eslint/parser',
+        extraFileExtensions: ['.astro'],
+        sourceType: 'module',
       },
     },
     plugins: {
@@ -25,10 +25,10 @@ export default [
 
   // JS / TS files
   {
-    files: ["**/*.js", "**/*.ts"],
+    files: ['**/*.js', '**/*.ts'],
     languageOptions: {
-      ecmaVersion: "latest",
-      sourceType: "module",
+      ecmaVersion: 'latest',
+      sourceType: 'module',
     },
   },
 ];

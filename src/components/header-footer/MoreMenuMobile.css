@@ -26,7 +26,7 @@ body.menu-open {
 
 .mobile-menu a,
 .mobile-menu summary {
-  font-family: "Bitter";
+  font-family: 'Bitter';
   color: var(--cg-font);
   text-decoration: none;
   font-weight: 600;
