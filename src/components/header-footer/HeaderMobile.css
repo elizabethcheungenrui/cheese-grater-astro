@@ -1,18 +1,17 @@
 .header-mobile {
-  display: flex;
-  flex-direction: row;
-  text-align: center;
+  display: grid;
+  grid-template-columns: auto 1fr;
   align-items: center;
-  align-content: start;
-  justify-content: space-between;
 
+  padding: 1rem 2rem 0.5rem 0;
   background: var(--cg-white);
   border-bottom: 2px solid #ddd;
+}
 
-  padding: 1rem 1.5rem 0.5rem 0;
-  position: relative;
-  top: 0;
-  z-index: 100;
+.header-mobile .logo {
+  display: grid;
+  grid-template-rows: auto auto;
+  justify-items: center;
 }
 
 .header-mobile .logo h3 {
@@ -28,9 +27,9 @@
 }
 
 .header-mobile .logo-link {
+  justify-self: start;
   text-decoration: none;
   color: inherit;
-  cursor: pointer;
 }
 
 /* "CHEESE GRATER" */
@@ -71,11 +70,7 @@
 }
 
 .menu-toggle {
-  position: fixed;
-  top: 1.3rem;
-  right: 1rem;
-  z-index: 2000;
-
+  justify-self: end;
   background: none;
   border: none;
   font-size: 1.5rem;

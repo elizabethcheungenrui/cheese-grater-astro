@@ -21,7 +21,7 @@ export default function BCard({
     <div className="card b-card">
       <a href={`/article/${slug}`} className="link">
         <div className="ratio-7-5">
-          <img src={image || undefined} alt={title} />
+          <img src={image || undefined} alt={title} loading="lazy" />
         </div>
 
         {tag != '' && (

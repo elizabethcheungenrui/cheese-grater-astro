@@ -21,7 +21,12 @@ export default function ACard({
     <div className="card a-card">
       <a href={`/article/${slug}`} className="link">
         <div className="ratio-7-5">
-          <img src={image || undefined} alt={title} fetchPriority="high" />
+          <img
+            src={image || undefined}
+            alt={title}
+            fetchPriority="high"
+            loading="lazy"
+          />
         </div>
 
         <span className={`tag tag-major tag-${section.toLowerCase()}`}>

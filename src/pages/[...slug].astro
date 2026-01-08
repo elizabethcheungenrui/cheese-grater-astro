@@ -2,7 +2,6 @@
 // src/pages/[...slug].Astro
 export const prerender = false;
 import BaseLayout from '../layouts/BaseLayout.astro';
-import '../styles/NotFound.css';
 
 Astro.response.status = 404;
 ---
@@ -17,3 +16,28 @@ Astro.response.status = 404;
     </p>
   </main>
 </BaseLayout>
+
+<style>
+  .not-found {
+    padding: 2rem 10rem;
+  }
+
+  .not-found h1 {
+    font-size: 4rem;
+    text-align: center;
+    color: var(--cg-font);
+  }
+
+  .not-found p {
+    font-family: 'Libre Baskerville';
+    font-size: 1.3rem;
+    text-align: center;
+    color: var(--cg-font);
+  }
+
+  @media (max-width: 1024px) {
+    .not-found {
+      padding: 1.5rem;
+    }
+  }
+</style>

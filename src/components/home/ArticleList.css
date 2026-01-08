@@ -136,7 +136,6 @@
 @media (max-width: 1024px) {
   .article-list {
     padding: 2rem;
-    padding-top: 4.5rem;
   }
   .article-list .main-grid {
     gap: 0.8rem;
